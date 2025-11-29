@@ -1,0 +1,10 @@
+# Ignore virtual environment
+venv/
+__pycache__/
+
+# Ignore data files (too large for git)
+data/
+*.csv
+
+# Ignore secrets (if you add keys later)
+.env
