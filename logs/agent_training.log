@@ -1,0 +1,18 @@
+2026-01-05 19:37:32,398 - INFO - --- Starting Quick Training Session ---
+2026-01-05 19:37:38,285 - INFO - Loaded 1407532 rows of data.
+2026-01-05 19:37:40,578 - INFO - Training for 100000 timesteps...
+2026-01-05 20:21:40,664 - INFO - --- Training Complete in 44.00 minutes ---
+2026-01-05 20:21:40,684 - INFO - Model saved to: models\PPO_BTCUSD_QUICK.zip
+2026-01-05 20:21:41,705 - INFO - Learning curve saved to: models\agent_learning_curve.png
+2026-01-05 20:33:13,076 - INFO - --- Starting Quick Training Session ---
+2026-01-05 20:33:18,195 - INFO - Loaded 1407532 rows of data.
+2026-01-05 20:33:20,613 - INFO - Training for 100000 timesteps...
+2026-01-05 20:39:01,889 - INFO - --- Training Complete in 5.69 minutes ---
+2026-01-05 20:39:01,910 - INFO - Model saved to: models\PPO_BTCUSD_QUICK.zip
+2026-01-05 20:39:02,812 - INFO - Learning curve saved to: models\agent_learning_curve.png
+2026-01-06 10:41:39,456 - INFO - --- Starting Quick Training Session ---
+2026-01-06 10:41:48,037 - INFO - Loaded 1407532 rows of data.
+2026-01-06 10:41:50,939 - INFO - Training for 100000 timesteps...
+2026-01-06 10:44:51,311 - INFO - --- Training Complete in 3.01 minutes ---
+2026-01-06 10:44:51,329 - INFO - Model saved to: models\PPO_BTCUSD_QUICK_1767676491.zip
+2026-01-06 10:44:51,806 - INFO - Learning curve saved to: models\agent_learning_curve_1767676491.png

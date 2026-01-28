@@ -1,0 +1,16 @@
+2026-01-05 20:52:45,034 - INFO - --- Starting Final Training Pipeline for BTCUSD ---
+2026-01-05 20:52:45,034 - INFO - Loading Training & Validation Sets...
+2026-01-05 20:52:56,371 - INFO - Train Rows: 1407532 | Val Rows: 150807
+2026-01-05 20:52:56,387 - INFO - --- FRESH TRAINING MODE ---
+2026-01-05 20:53:00,561 - INFO - Training for 500000 steps...
+2026-01-05 21:56:50,154 - INFO - --- Training Complete in 63.83 minutes ---
+2026-01-05 21:56:50,202 - INFO - Final Model saved to: models\PPO_BTCUSD_FINAL_1767630410.zip
+2026-01-05 21:56:50,203 - INFO - Champion Model (Best Validation) saved at: models\best_model.zip
+2026-01-05 21:56:51,266 - INFO - Learning curve saved to: models\learning_curve.png
+2026-01-05 21:56:51,290 - INFO - --- Starting Final Training Pipeline for BTCUSD ---
+2026-01-05 21:57:03,399 - INFO - Train Rows: 1407532 | Val Rows: 150807
+2026-01-05 21:57:03,403 - INFO - --- FRESH TRAINING ---
+2026-01-05 21:57:03,415 - INFO - Training for 1000000 steps...
+2026-01-05 22:57:18,007 - INFO - --- Training Complete in 60.24 minutes ---
+2026-01-05 22:57:18,027 - INFO - Final Model saved to: models\PPO_BTCUSD_FINAL.zip
+2026-01-05 22:57:18,595 - INFO - Final Learning Curve saved to: models\final_learning_curve.png
