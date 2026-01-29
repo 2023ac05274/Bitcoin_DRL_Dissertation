@@ -37,8 +37,8 @@ def run_analysis():
     print(f"Number of time gaps found: {len(gaps)}")
     
     if len(gaps) > 0:
-        print("\nTop 5 Largest Gaps:")
-        print(gaps.sort_values(ascending=False).head(5))
+        print("\nTop 10 Largest Gaps:")
+        print(gaps.sort_values(ascending=False).head(10))
     
     # 4. Generate Plot
     print("\nGenerating price plot...")
