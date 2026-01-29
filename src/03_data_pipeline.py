@@ -49,7 +49,7 @@ def augment_data(df):
     return df_aug
 
 def plot_validation(df_real, df_aug):
-    """Generates a dissertation-quality validation plot."""
+    """Generates a validation plot."""
     logging.info("   -> Generating validation plots...")
     
     plt.figure(figsize=(14, 6))
