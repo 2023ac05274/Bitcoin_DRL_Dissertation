@@ -49,29 +49,42 @@ def augment_data(df):
     return df_aug
 
 def plot_validation(df_real, df_aug):
-    """Generates a validation plot."""
+    """Generates a validation plot with enhanced visualizations."""
     logging.info("   -> Generating validation plots...")
-    
-    plt.figure(figsize=(14, 6))
-    
+    plt.figure(figsize=(18, 6))
+
     # Plot 1: Price Paths
-    plt.subplot(1, 2, 1)
+    plt.subplot(1, 3, 1)
     plt.plot(df_real['close'].values, label='Real (Bullish)', color='blue', alpha=0.7)
     plt.plot(df_aug['close'].values, label='Augmented (Bearish)', color='red', alpha=0.7)
     plt.title(f"{SYMBOL} Price Regimes")
     plt.legend()
     plt.grid(True, alpha=0.3)
-    
-    # Plot 2: Return Distribution
-    plt.subplot(1, 2, 2)
-    plt.hist(df_real['log_ret'], bins=50, alpha=0.5, label='Real Returns', color='blue', density=True)
-    plt.hist(df_aug['log_ret'], bins=50, alpha=0.5, label='Augmented Returns', color='red', density=True)
-    plt.title("Statistical Distribution of Returns")
+
+    # Plot 2: Rolling Volatility (30-period std of returns)
+    plt.subplot(1, 3, 2)
+    real_vol = df_real['log_ret'].rolling(30).std()
+    aug_vol = df_aug['log_ret'].rolling(30).std()
+    plt.plot(real_vol.values, label='Real Volatility', color='blue')
+    plt.plot(aug_vol.values, label='Augmented Volatility', color='red')
+    plt.title('Rolling 30-Period Volatility')
     plt.legend()
     plt.grid(True, alpha=0.3)
-    
+
+    # Plot 3: Rolling Mean Return (trend)
+    plt.subplot(1, 3, 3)
+    real_mean = df_real['log_ret'].rolling(30).mean()
+    aug_mean = df_aug['log_ret'].rolling(30).mean()
+    plt.plot(real_mean.values, label='Real Mean Return', color='blue')
+    plt.plot(aug_mean.values, label='Augmented Mean Return', color='red')
+    plt.title('Rolling 30-Period Mean Return')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+
     output_path = os.path.join(PROCESSED_DIR, "data_distribution.png")
+    plt.tight_layout()
     plt.savefig(output_path, dpi=300)
+    plt.close()
     logging.info(f"   -> Validation plot saved to {output_path}")
 
 def run_pipeline():

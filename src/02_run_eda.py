@@ -50,11 +50,10 @@ def run_analysis():
     plt.legend()
     plt.grid(True, alpha=0.3)
     
-    # Save plot to file instead of showing it
+    # Save plot to file 
     output_img = "eda_price_plot.png"
     plt.savefig(output_img)
     print(f"Graph saved successfully as '{output_img}'")
-    print("Check your project folder to see the image!")
 
 if __name__ == "__main__":
     run_analysis()

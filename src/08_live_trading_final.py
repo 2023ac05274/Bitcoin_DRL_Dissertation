@@ -34,11 +34,11 @@ PNL_IMG_PATH = os.path.join(LOG_DIR, 'live_pnl.png')
 
 # RISK SETTINGS
 TRADE_SIZE = 1 
-INITIAL_STOP_LOSS_PCT = 0.0015 
-TAKE_PROFIT_PCT = 0.0015 
-MAX_LEVERAGE_CAP = 50
-MAX_HOLD_MINUTES = 30
-MAX_DRAWDOWN_PCT = 0.20 
+INITIAL_STOP_LOSS_PCT = 0.0015 #0.15%
+TAKE_PROFIT_PCT = 0.0015 #0.15%
+MAX_LEVERAGE_CAP = 50 #50x
+MAX_HOLD_MINUTES = 30 #30 minutes
+MAX_DRAWDOWN_PCT = 0.20 #20%
 
 # HYBRID LOGIC SETTINGS
 ENABLE_HYBRID_OVERRIDES = True 
@@ -142,7 +142,7 @@ def log_performance_to_csv(balance, drawdown, account_obj=None, final=False):
     except Exception as e:
         logging.error(f"Perf CSV Error: {e}")
 
-# --- 4. API FUNCTIONS (ROBUST) ---
+# --- 4. API FUNCTIONS  ---
 def generate_signature(method, timestamp, path, query_string, payload):
     data = method + timestamp + path + query_string + payload
     return hmac.new(API_SECRET.encode(), data.encode(), hashlib.sha256).hexdigest()
@@ -462,7 +462,7 @@ class LiveTrader:
                         
                         self.pos = 0
 
-                # 3. AI + HYBRID LOGIC
+                # 3. AI + Rule-Based Hybrid Decision
                 action, _ = self.model.predict(obs, deterministic=True)
                 act_str = ["HOLD", "BUY", "SELL"][action[0]]
                 self.leverage = calculate_dynamic_leverage(atr, price)

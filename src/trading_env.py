@@ -5,9 +5,9 @@ import pandas as pd
 
 class BitcoinTradingEnv(gym.Env):
     """
-    UPGRADED DRL Environment
-    Improvements:
-    - Continuous Reward (Net Worth Change) -> Fixes "Sparse Reward" problem
+     DRL Environment
+        Key Features:
+    - Continuous Reward (Net Worth Change) 
     - Reward Scaling -> Helps Neural Network converge
     - Step Penalty -> Discourages inaction
     """
@@ -20,7 +20,7 @@ class BitcoinTradingEnv(gym.Env):
                  take_profit_pct=0.005,   # 0.5% (Realistic 30m Target)
                  trailing_stop_pct=0.002, # 0.2% Trail
                  max_drawdown_pct=0.10,
-                 reward_scaling=1e-4):      # <--- NEW: Scale rewards to be ~1.0
+                 reward_scaling=1e-4):      # <---  Scale rewards to be ~1.0
         
         super(BitcoinTradingEnv, self).__init__()
 

@@ -60,7 +60,7 @@ def generate_proxy_funding():
     logging.info(f"Loaded {len(df)} price rows for processing.")
     
     # 2. Calculate Proxy Funding Rate
-    # Logic: Funding is proportional to price deviation from a moving average.
+    # Funding is proportional to price deviation from a moving average.
     
     # Calculate 8-hour Moving Average (8 * 60 = 480 minutes)
     window = 480

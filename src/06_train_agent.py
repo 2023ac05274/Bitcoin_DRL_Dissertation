@@ -80,10 +80,10 @@ def plot_training_results(log_dir):
 def train():
     logging.info("--- Starting Quick Training Session ---")
 
-    # 1. Setup Directories
+    #  Setup Directories
     os.makedirs(MODELS_DIR, exist_ok=True)
 
-    # 2. Load Data
+    #  Load Data
     if not os.path.exists(INPUT_PATH):
         logging.error("Error: Feature file not found.")
         return
@@ -91,11 +91,11 @@ def train():
     df = pd.read_csv(INPUT_PATH, index_col=0, parse_dates=True)
     logging.info(f"Loaded {len(df)} rows of data.")
 
-    # 3. Initialize Environment (With Monitor for stats)
-    # We wrap the Env in 'Monitor' to track episode rewards easily
+    #  Initialize Environment (With Monitor for stats)
+    #  wrap the Env in 'Monitor' to track episode rewards easily
     env = DummyVecEnv([lambda: Monitor(BitcoinTradingEnv(df, execution_mode='taker'))])
 
-    # 4. Setup Callback for Evaluation/Plotting
+    #  Setup Callback for Evaluation/Plotting
     # Evaluating on the training env itself just for the sake of the curve in this simple script
     eval_callback = EvalCallback(
         env,
@@ -106,7 +106,7 @@ def train():
         render=False
     )
 
-    # 5. Initialize PPO
+    #  Initialize PPO
     model = PPO(
         "MlpPolicy", 
         env, 
@@ -127,7 +127,7 @@ def train():
         )
     )
 
-    # 6. Start Training
+    #  Start Training
     logging.info(f"Training for {TIMESTEPS} timesteps...")
     start_time = time.time()
     
@@ -136,12 +136,12 @@ def train():
     end_time = time.time()
     logging.info(f"--- Training Complete in {(end_time - start_time)/60:.2f} minutes ---")
 
-    # 7. Save
+    #  Save
     save_path = os.path.join(MODELS_DIR, f"PPO_{SYMBOL}_QUICK_{int(time.time())}")
     model.save(save_path)
     logging.info(f"Model saved to: {save_path}.zip")
 
-    # 8. Plot
+    #  Plot
     plot_training_results(LOGS_DIR)
 
 if __name__ == "__main__":

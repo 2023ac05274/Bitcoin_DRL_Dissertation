@@ -1563,3 +1563,77 @@
 2026-01-26 21:58:49,707 Entered LONG at 87764.1
 2026-01-26 22:03:01,254 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
 2026-01-26 22:03:01,254 Local Exit (Stop Loss): PnL $-164.20
+
+2026-01-31 13:06:57,032 Bot started.
+2026-01-31 13:07:13,771 Entered LONG at 82870.4
+2026-01-31 13:22:37,693 Bot started.
+2026-01-31 13:22:57,674 Entered LONG at 82870.4
+2026-01-31 16:09:57,182 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
+2026-01-31 16:09:57,183 Local Exit (Time Limit): PnL $56.70
+2026-01-31 16:10:00,443 Entered LONG at 82927.1
+2026-01-31 16:40:17,620 Local Exit (Time Limit): PnL $0.00
+2026-01-31 16:40:20,687 Entered LONG at 82927.1
+2026-01-31 17:10:27,808 Local Exit (Time Limit): PnL $0.00
+2026-01-31 17:10:31,343 Entered LONG at 82927.1
+2026-01-31 17:40:40,888 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
+2026-01-31 17:40:40,888 Local Exit (Time Limit): PnL $0.00
+2026-01-31 17:40:45,777 Entered LONG at 82927.1
+2026-01-31 18:20:56,599 Local Exit (Time Limit): PnL $0.00
+2026-01-31 18:21:27,189 Order Failed: {'error': {'code': 'expired_signature', 'context': {'request_time': 1769863872, 'server_time': 1769863886}}, 'success': False}
+2026-01-31 18:21:29,494 Sync: Found existing LONG
+2026-01-31 18:22:35,140 Local Exit (Time Limit): PnL $0.00
+2026-01-31 18:22:38,479 Entered LONG at 82927.1
+2026-01-31 18:53:03,185 Local Exit (Time Limit): PnL $0.00
+2026-01-31 18:53:07,674 Entered LONG at 82927.1
+2026-01-31 19:23:40,924 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
+2026-01-31 19:23:40,924 Local Exit (Time Limit): PnL $-58.50
+2026-01-31 19:23:45,499 Entered LONG at 82868.6
+2026-01-31 19:54:30,492 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
+2026-01-31 19:54:30,493 Local Exit (Time Limit): PnL $58.90
+2026-01-31 19:54:35,442 Entered LONG at 82927.5
+2026-01-31 20:25:06,846 Order Failed: {'error': {'code': 'no_position_for_reduce_only'}, 'success': False}
+2026-01-31 20:25:06,848 Local Exit (Time Limit): PnL $4.20
+2026-01-31 20:25:12,514 Entered LONG at 82931.7
+2026-01-31 20:56:05,750 Local Exit (Time Limit): PnL $0.00
+2026-01-31 20:56:11,337 Entered LONG at 82931.7
+2026-01-31 21:27:19,608 Local Exit (Time Limit): PnL $0.00
+2026-01-31 21:27:24,416 Entered LONG at 82931.7
+2026-01-31 22:17:56,320 Bot started.
+2026-01-31 22:18:07,529 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:18:08,891 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:19:14,980 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:19:16,127 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:20:22,896 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:20:24,045 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:21:29,619 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:21:30,677 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:22:36,827 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:22:38,305 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:23:44,863 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:23:46,034 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:24:52,720 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:24:54,038 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:26:01,622 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:26:03,106 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:27:11,031 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:27:12,569 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:28:19,659 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:28:21,074 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:29:27,535 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:29:28,933 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:30:35,518 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:30:36,660 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:31:41,535 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:31:42,345 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:32:49,473 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:32:50,288 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:33:54,857 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:33:55,658 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:35:00,229 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:35:01,173 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:36:05,561 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:36:06,355 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:37:11,683 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:37:12,783 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:38:18,064 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}
+2026-01-31 22:38:19,065 Order Failed: {'error': {'code': 'immediate_liquidation'}, 'success': False}

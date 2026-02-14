@@ -14,7 +14,7 @@ END_DATE = datetime(2025, 12, 31)
 
 # Specific endpoint for Delta India
 BASE_URL = "https://api.india.delta.exchange" # Using Testnet CDN for reliability in demo
-# Note: For real mainnet data, swap back to: "https://api.india.delta.exchange" 
+# For real mainnet data: "https://api.india.delta.exchange" 
 
 BATCH_SIZE = 2000 # Max candles per request
 
@@ -127,26 +127,26 @@ def visualize_data(df):
     plt.close() # Close to free memory
 
 if __name__ == "__main__":
-    # 1. Fetch
+    #  Fetch
     raw_data = fetch_full_history()
     logging.info(f"Total candles fetched: {len(raw_data)}")
     
     if len(raw_data) > 0:
-        # 2. Process
+        #  Process
         df = pd.DataFrame(raw_data)
         df['timestamp'] = pd.to_datetime(df['time'], unit='s')
         df.set_index('timestamp', inplace=True)
         df.sort_index(inplace=True)
         df = df[~df.index.duplicated(keep='first')]
         
-        # 3. Save CSV
+        #  Save CSV
         df.to_csv(OUTPUT_FILE)
         logging.info(f"Data saved to: {OUTPUT_FILE}")
         
-        # 4. Visualize (New Step)
+        #  Visualize 
         visualize_data(df)
         
-        # 5. Summary Stats
+        # Summary Stats
         logging.info(f"Date Range: {df.index.min()} to {df.index.max()}")
         logging.info(f"Missing seconds check: {(df.index[-1] - df.index[0]).total_seconds() / 60 - len(df):.0f} missing candles (approx)")
     else:
